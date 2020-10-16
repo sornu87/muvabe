@@ -1,1 +1,1 @@
-web: gunicorn muvabe.wsgi pin --log-file
+web: gunicorn muvabe.wsgi --log-file -
