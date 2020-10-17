@@ -1,5 +1,6 @@
 from muvabe.settings.base import *
 
+DEBUG = False
 
 DATABASES = {
     'default': {

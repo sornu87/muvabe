@@ -2,7 +2,7 @@ from muvabe.settings.base import *
 
 # Sobrecarregar os settings aqui
 
-DEBUG = False
+DEBUG = True
 
 try:
     from muvabe.settings.local import *
