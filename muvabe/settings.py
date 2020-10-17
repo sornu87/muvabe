@@ -149,10 +149,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # django_heroku.settings(locals())
-
-
-try:
-    from local_settings import *
-except ImportError:
-    # No local settings was found, skipping.
-    pass
