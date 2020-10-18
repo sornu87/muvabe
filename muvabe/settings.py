@@ -93,14 +93,14 @@ WSGI_APPLICATION = 'muvabe.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbcfvfu89vshg7',
-        'USER': 'cqpbambwqaevbk',
-        'PASSWORD': '0ad686983a933db4df5be8666cc28ffbe1957eff09830f781c275392ac579c26',
-        'HOST': 'ec2-34-200-72-77.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+import dj_database_url
+db_from_env =  dj_database_url.config(conn_max_age_600)
+DATABASES['default'].update(db_from_env)
+
 
 
 # Password validation
